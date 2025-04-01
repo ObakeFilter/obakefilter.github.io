@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    reactStrictMode: true,
+    assetPrefix: '/obakefilter.github.io/',
+    basePath: '/obakefilter.github.io',
+    output: 'export'
 };
 
 export default nextConfig;
