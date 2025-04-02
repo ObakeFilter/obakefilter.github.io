@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regex Replace</title>
+    <style>
+        textarea {
+            width: 400px;
+            height: 200px;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<label for="input">Input:</label>
+<textarea id="input"></textarea>
+
+<label for="output">Output:</label>
+<textarea id="output" readonly></textarea>
+
+<script>
+    const inputTextArea = document.getElementById('input');
+    const outputTextArea = document.getElementById('output');
+
+    inputTextArea.addEventListener('input', function () {
+        const inputText = inputTextArea.value;
+        const replacedText = inputText.replace(/\r\n/g, '\t');
+        outputTextArea.value = replacedText;
+    });
+</script>
+
+</body>
+</html>
