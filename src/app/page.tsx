@@ -6,7 +6,7 @@ export default function Home() {
     const [inputText, setInputText] = useState('');
     const [outputText, setOutputText] = useState('');
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event: any) => {
         const newInput = event.target.value;
         setInputText(newInput);
         const replacedText = newInput.replace(/\r\n/g, '\t');
