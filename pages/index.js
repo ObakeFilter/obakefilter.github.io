@@ -1,21 +1,19 @@
-'use client'
-
 import { useState } from 'react';
 
 export default function Home() {
     const [inputText, setInputText] = useState('');
     const [outputText, setOutputText] = useState('');
 
-    const handleInputChange = (event: any) => {
+    const handleInputChange = (event) => {
         const newInput = event.target.value;
         setInputText(newInput);
-        const replacedText = newInput.replace(/\r\n/g, '\t');
+        const replacedText = newInput.replace(/\n/g, '\t');
         setOutputText(replacedText);
     };
 
     return (
         <div>
-            <h1>Regex Replace</h1>
+            <h1>Text Transpose</h1>
             <div>
                 <label htmlFor="input">Input:</label>
                 <textarea
